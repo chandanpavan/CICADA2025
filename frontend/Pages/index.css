@@ -3,15 +3,20 @@
     margin-left:auto;
     margin-right:auto;
     width:30%;
-    border:2px;
-    background-color:rgb(96, 216, 226);
+    background: linear-gradient(to bottom right,#a1c4fd,#c2e9fb,#fbc2eb);
+    backdrop-filter:blur(10px);
+    border-radius:10px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.2);
     padding: 10px;
     font-family:'Poppins';
     margin-top: 10%;
     font-size: 20px;
 }
 body{
-    background-color: rgb(96, 216, 226);
+    background-image: linear-gradient(to bottom,#a1c4fd,#c2e9fb,#fbc2eb);
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 input{
@@ -20,6 +25,7 @@ input{
     border-style: solid;
     border:1px solid black;
     padding: 5px;
+    width: 60%;
 }
 .forgot{
     font-size: 15px;
@@ -36,9 +42,4 @@ input{
     border-radius :5px;
     border-color:black;
     padding:5px;
-
-
-
-
-
 }
