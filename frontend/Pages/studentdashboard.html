@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Student Dashboard</title>
+    </head>
+    <link rel="stylesheet" href="index.css">
+    <body>
+        <div class="container">
+            <div class="sidebar">
+                <h2 style="margin-top: 30px;">Placement Portal</h2>
+                <div>
+                <ul>
+                    <li><a href="studentdashboard.html">Dashboard</li></a>
+                    <li><a href="studentmessages.html">Messages </li></a>
+                    <li><a href="studentapplications.html">My Applications</li></a>
+                    <li><a href="studentcompanies.html">Browse Companies</li></a>
+                    <li><a href="studentprofile.html">Profile</li></a>
+                    <li><a href="studentsettings.html">Settings</li></a>
+                    <li><a href="loginpage.html">Logout</li></a>
+                </ul>
+                </div>
+            </div>
+            <div class="main-content">
+               <div class="greeting">
+                <h2 id="greetingText" ></h2>
+            </div>
+            </div>
+        </div>
+        <script>
+            const greetingText=document.getElementById("greetingText");
+            const hour=new Date().getHours();
+
+            let message="";
+
+            if(hour < 12 && hour>=5){
+                message="Good Morning";
+            }
+            else if(hour < 17 && hour>=12){
+                message="Good Afternoon";
+            }
+            else if(hour<21 && hour>=17){
+                message="Good Evening";
+            }
+            else{   
+                message="Good Night";
+            }
+            greetingText.textContent=`${message}, Chandan!`;
+        </script>
+    </body>
+</html>

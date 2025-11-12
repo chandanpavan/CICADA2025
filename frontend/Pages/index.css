@@ -4,6 +4,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: Pacifio;
+    src: url(../Pacifico/Pacifico-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
 .login{
 font-family: MomoSignature;
 width:70%;
@@ -75,4 +81,69 @@ height:100vh;
 
 .login_form{
     margin-left:50px;
+}
+
+.container{
+    display:flex;
+    height:100vh;
+    padding:0px;
+}
+.sidebar{
+    width:250px;
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+    justify-content: space-between;
+    background-color: #d8d3ba;
+    color:#764d24;
+    margin-bottom:200px #E2E2E2;
+    margin-top: 10px #E2E2E2;
+    font-family: MomoSignature;
+    font-size: large;   
+
+    
+}
+.main-content{
+    flex:1;
+    padding:20px;
+    background-color: #E2E2E2;
+    font-family: MomoSignature;
+    border:none;
+
+}
+
+.sidebar ul{
+    list-style: none;
+    padding:0;
+    margin-bottom: 170px;
+}
+
+.sidebar ul li{
+    margin:30px 30px;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    color:#764d24;
+    font-size: 18px;
+    display:block;
+}
+
+.greeting{
+    margin:30px 0;
+    font-family: MomoSignature;
+    font-size: 24px;
+    color: #764d24;
+    font-weight: 800;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.greeting h2{
+    font-size:28px;
+    font-weight:600;
+    color:#333;
+    text-decoration: none;
+    border-bottom: none;
+
 }
