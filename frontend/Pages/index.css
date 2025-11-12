@@ -5,7 +5,8 @@
     font-style: normal;
 }
 .login{
-width:50%;
+font-family: MomoSignature;
+width:70%;
 display:flex;
 justify-content: center;
 align-items:center;
@@ -20,6 +21,7 @@ body{
 }
 
 input{
+font-family: MomoSignature;
 border-radius: 10px;
 border-color: black;
 border-style: solid;
@@ -28,7 +30,8 @@ padding: 5px;
 width: 70%;
 height: 25px;
 margin-top: 30px;
-color:#E8E7E6;
+color:black;
+
 }
 
 .body-wrapper{
@@ -45,18 +48,22 @@ height:100vh;
     display:flex;
     justify-content:center;
     height: 60vh;
+    background-blend-mode: overlay;
 }
 
-.btn{
-    border:none;
-    width:40%;  
-    background-color:#E8E7E6;
-    color:#E8E7E6;
+.btn button{
+    border:1px;
+    width:auto;  
+    background-color:#eed7c1;
+    color:#764d24;
     font-weight: 500px;
     text-align: center;
-    font-family: "MomoSignature";
+    font-family: MomoSignature;
     margin-top:30px;
     margin-left:50px;
+    font-size:large;
+    border-radius: 2px;
+    border-color:#764d24;
     
 }
 .forgot{
