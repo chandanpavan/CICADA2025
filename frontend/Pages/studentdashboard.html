@@ -5,12 +5,12 @@
     <link rel="stylesheet" href="index.css">
     <body>
         <div class="container">
-            <div class="sidebar">
+            <div class="sidebar-left">
                 <h2 style="margin-top: 30px;">Placement Portal</h2>
                 <div>
                 <ul>
                     <li><a href="studentdashboard.html">Dashboard</li></a>
-                    <li><a href="studentmessages.html">Messages </li></a>
+                    <li><a href="studentnotifications.html">Notifications </li></a>
                     <li><a href="studentapplications.html">My Applications</li></a>
                     <li><a href="studentcompanies.html">Browse Companies</li></a>
                     <li><a href="studentprofile.html">Profile</li></a>
@@ -22,7 +22,62 @@
             <div class="main-content">
                <div class="greeting">
                 <h2 id="greetingText" ></h2>
+                </div>
+                <div class="card_container">
+                    <div class="card">
+                        <h3>Total Drives</h3>
+                        <p  style="margin-bottom: 30px;">12</p>
+                    </div>
+                    <div class="card">
+                        <h3>Application sent</h3>
+                        <p>4</p>
+                    </div>
+                    <div class="card">
+                        <h3>Offer Received</h3>
+                        <p>8</p>
+                    </div>
+                    <div class="card">
+                        <h3>Pending Results</h3>
+                        <p>2</p>
+                     </div>
+                </div>
+                <div class="upcoming_drivers">
+                    <h3 style="margin-top: 30px;">Upcoming Drives</h3>
+                    <div class="upcoming_drivers_container">
+                        <div class="card_upcoming_driver">
+                            <p>Company:Tata Motors</p>
+                            <p>Role:Manager</p>
+                            <p>Location:Hybrid(Bangalore)</p>
+                            <p>Drive Date:19th May</p>
+                            <button>Apply</button>
+                        </div>
+                        <div class="card_upcoming_driver">
+                            <p>Company:Tesla</p>
+                            <p>Role:CEO</p>
+                            <p>Location:Mars</p>
+                            <p>Drive Date:1002 B.C</p>
+                            <button>Apply</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="sidebar-right">
+                <div class="profile-card">
+                <div class="right_profile_image">
+                    <h1>About me!</h1>
+                    <img id="profile_photo" src="../images/default_profile_picture.jpg" class="profile_photo">
+                    <input type="file" id="photo_upload" accept="image/*"style="display: none;">
+                    <img src="../images/edit_photo.avif" class="camera_icon" onclick="document.getElementById('photo_upload').click()">
+
+                </div>
+                <div class="right_profile_info">
+                    <h3>Chandan</h3>
+                    <p>CSBS Department</p>
+                    <p>CGPA: 8.9</p>
+                    <p>Resume:Uploaded</p>
+                </div>
+                <button class="edit_profile_button">Edit Profile</button>
+                </div>
             </div>
         </div>
         <script>
@@ -37,13 +92,21 @@
             else if(hour < 17 && hour>=12){
                 message="Good Afternoon";
             }
-            else if(hour<21 && hour>=17){
+            else{
                 message="Good Evening";
             }
-            else{   
-                message="Good Night";
-            }
             greetingText.textContent=`${message}, Chandan!`;
+
+            const photo_upload= document.getElementById("photo_upload");
+            const profile_photo=document.getElementById("profile_photo");
+
+            photo_upload.addEventListener("change",function(){
+                const file=this.files[0];
+                if(file){
+                    profile_photo.src=URL.createObjectURL(file);
+                }
+            })
+
         </script>
     </body>
 </html>
