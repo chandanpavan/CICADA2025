@@ -65,7 +65,67 @@
                         </div>
                     </div>
                 </div>
+                <div class="sidebar-right">
+                    <div class="stats-panel">
+                        <h2> My Stats</h2>
+                        
+                        <div class="big-circle"
+                            id="pie-chart" 
+                            data-shortlisted="4"
+                            data-accepted="3"
+                            data-rejected="1">
+
+                            <div class="tooltip" id="chart-tooltip"></div>
+                        </div>
+
+                        <div class="legend">
+                            <p><span class="pi_chart yellow"></span>Shortlisted</p>
+                            <p><span class="pi_chart green"></span>Accepted</p>
+                            <p><span class="pi_chart red"></span>Rejected</p>
+
+                        </div>
+                            
+                        </div>
+                    </div>
                 </div>
+                </div>  
         </div>
+        <script>
+            const circle=document.querySelector("#pie-chart");
+            const tooltip=document.querySelector("#chart-tooltip");
+
+            const shortlisted=parseInt(circle.getAttribute("data-shortlisted"));
+            const accepted=parseInt(circle.getAttribute("data-accepted"));
+            const rejected=parseInt(circle.getAttribute("data-rejected"));
+
+            const total=shortlisted+accepted+rejected;
+
+            const d1=shortlisted/total*360;
+            const d2=accepted/total*360;
+            const d3=rejected/total*360;
+
+            const finalBG=`
+                conic-gradient(
+                    #FFC107 0deg ${d1}deg,
+                    #4CAF50 ${d1}deg ${d1+d2}deg,
+                    #F44336 ${d1+d2}deg 360deg
+                )
+            `;
+            circle.style.setProperty("--final-bg",finalBG);
+
+            const statsText=`
+                Shortlisted: ${shortlisted} <br>
+                Accepted: ${accepted} <br>
+                Rejected: ${rejected}
+                `;
+
+            circle.addEventListener("mouseenter",() =>{
+                tooltip.innerHTML=statsText;
+                tooltip.style.display="block";
+            });
+            circle.addEventListener("mouseleave",() =>{
+                tooltip.style.display="none";
+            });
+        </script>
     </body>
 </html>
