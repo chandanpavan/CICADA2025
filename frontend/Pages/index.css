@@ -108,6 +108,12 @@ height:100vh;
     top:12px;
     bottom:12px;
     box-shadow:4px 0px 15px rgba(0,0,0,0.15);
+
+}
+
+.sidebar-left h2{
+    margin-bottom:40px
+
 }
 .main-content{
     flex:1;
@@ -211,7 +217,7 @@ height:100vh;
     display:flex;
     flex-direction:column;
     padding:20px;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: #d8d3ba;
     color:#764d24;
     font-family: MomoSignature;
@@ -224,6 +230,11 @@ height:100vh;
     bottom:12px;
     box-shadow: -4px 0 15px rgba(0,0,0,0.15);
     transition:0.3s ease;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scroll-behavior: smooth;
 }
 .profile-card{
     text-align: center;
@@ -430,4 +441,55 @@ height:100vh;
 
 .big-circle:hover .tooltip{
         opacity: 1;
+}
+.upcoming_deadline{
+    
+}
+
+.udl_cards{
+    margin:0;
+    border:1px solid #d8d3ba;
+    border-radius: 12px;
+    box-shadow: 0px 2px 5px rgb(101, 97, 97);
+    margin-bottom:10px;
+}
+.udl_cards h4{
+    margin  :0px;      
+    font-weight:600px ; 
+    margin-left:10px;   
+}
+.upcoming_deadline h3{
+    margin-bottom:12px;
+}
+.udl_cards h5{
+    margin-top:8px;
+    margin-bottom: 12px;
+    margin-left:20px;
+    font-weight: lighter;
+}
+.udl_cards:hover{
+    transform:translateY(-3px);
+}
+.udl_cards:active{
+    transform: scale(0.96);
+}
+
+.dot{
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    margin-right:8px;
+}
+
+.dot.red{
+    background:#F44336;
+}
+
+.dot.yellow{
+    background:#FFC107;
+}
+
+.dot.green{
+    background: #4CAF50;
 }
