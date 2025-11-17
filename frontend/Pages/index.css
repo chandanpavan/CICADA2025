@@ -440,7 +440,7 @@ height:100vh;
 } 
 
 .big-circle:hover .tooltip{
-        opacity: 1;
+    opacity: 1;
 }
 .upcoming_deadline{
     
@@ -543,4 +543,28 @@ height:100vh;
     color: #764d24;
     margin-top:10px;
     font-weight: 500;
+}
+.profile_container{
+    background-color:#ddd;
+    padding:20px;
+    border-radius: 6px;
+}
+.profile_items{
+    background-color: #d8d3ba;
+    padding:15px;
+    color:#764d24;
+    font-weight: 100;
+    display:flex;
+    flex-direction: column;
+    border-color:#9d6d3d;
+    border-radius: 6px;
+    box-shadow: 0px 2px 5px rgb(101, 97, 97);
+    margin-bottom:10px;
+    cursor: pointer;
+    transition:0.3s ease;
+    width:100%;
+    font-family:Poppins;
+}
+.profile_items:hover{
+    transform: translateY(-3px);
 }
