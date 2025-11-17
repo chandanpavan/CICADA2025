@@ -10,6 +10,10 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: Roboto;
+    src: url(../Roboto/Roboto-VariableFont_wdth\,wght.ttf);
+}
 .login{
 font-family: MomoSignature;
 width:70%;
@@ -548,6 +552,11 @@ height:100vh;
     background-color:#ddd;
     padding:20px;
     border-radius: 6px;
+    display:flex;
+    flex-direction: space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    
 }
 .profile_items{
     background-color: #d8d3ba;
@@ -562,9 +571,56 @@ height:100vh;
     margin-bottom:10px;
     cursor: pointer;
     transition:0.3s ease;
-    width:100%;
-    font-family:Poppins;
-}
+    width:45%;
+    font-family:Roboto;
+  }
+
 .profile_items:hover{
     transform: translateY(-3px);
+}
+.profile_items h2{
+    font-family: MomoSignature;
+}
+.profile_items h3{
+    margin: 6px 0px;
+}
+.pi_div {
+    display:grid;
+    grid-template-columns: repeat(3,1fr); 
+    gap:20px;
+}
+.modal{
+    display:none;
+    position: fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+.modal_content{
+    background:white;
+    padding:20px;
+    width:400px;
+    border-radius:10px;
+    width: 450px;
+    max-height: 450px;
+    overflow:auto;
+    border-radius: 6px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.edit_btn{
+    background:#764d24;
+    color:white;
+    padding:5px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.no-hover * {
+    pointer-events: none;
+}
+.change_pass,.change_email,.change_phonenum, input{
+    margin-top:5px;
+    margin-bottom: 10px;
 }

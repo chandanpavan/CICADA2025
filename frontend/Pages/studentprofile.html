@@ -23,8 +23,7 @@
                 <h2>My Profile</h2>
                     <div class="profile_container">
                         <div class="profile_items">
-                            <img src="#" alt="Profile Picture">
-                            <h3> Name:Chandan</h3>
+                            <img id="profile_photo" src="../images/default_profile_picture.jpg" class="profile_photo">
                             <h3> USN:1BI18CS002</h3>
                             <h3> Branch:CSBS</h3>
                             <h3> Semester:3</h3>
@@ -40,17 +39,38 @@
                             <h3>Email:9TtJF@example.com</h3>
                             <h3>Address:Hyderabad</h3>
                         </div>
-                        <div class="profile_items">
-                            <h2>Academic Details</h2>
-                            <h3>Current Sem CGPA:9.0</h3>
-                            <h3>Overall CGPA:8.9</h3>
-                            <h3>Backlogs:No</h3>
-                            <h3>12th Percentage:90</h3>
-                            <h3>10th Percentage:90</h3>
-                        </div>
-                        <div class="profile_items">
-                            <h2>Skills</h2>
-                            <div class="programming_skills">
+                        <h2>Skills</h2>
+
+                        <ul id="skills_list" style =display:none;>
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+
+                            <li>Leadership</li>
+                            <li>Problem Solving</li>
+                            <li>Communication</li>
+
+                            <li>Git</li>
+                            <li>VSCode</li>
+                            <li>GitHub</li>
+                        </ul>
+                        <div class="profile_items" style="width:100%">
+                            <button class="edit_btn" onclick="openSkillsModal()">Edit</button>
+                            <div id="skillsModal" class="modal">
+                                <div class="modal_content">
+                                    <h2>Edit Skills</h2>
+
+                                    <textarea id="skills_input"></textarea>
+
+                                    <div class="modal_actions">
+                                    <button class="cancel_btn" onclick="closeSkillsModal()">Cancel</button>
+                                    <button class="save_btn" onclick="saveSkills()">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pi_div">
+                            <div class="programming_skills" >
                             <h2>Programming Skills</h2>
                             <h3>Java</h3>
                             <h3>Python</h3>
@@ -70,6 +90,15 @@
                             <h3>VSCode</h3>
                             <h3>GitHub</h3>
                             </div>
+                        </div>
+                        </div>
+                           <div class="profile_items">
+                            <h2>Academic Details</h2>
+                            <h3>Current Sem CGPA:9.0</h3>
+                            <h3>Overall CGPA:8.9</h3>
+                            <h3>Backlogs:No</h3>
+                            <h3>12th Percentage:90</h3>
+                            <h3>10th Percentage:90</h3>
                         </div>
                         <div class="profile_items">
                             <h2>Resume</h2>
@@ -93,13 +122,57 @@
                             <h2>Certificates</h2>
                             <h3>1st Place in Hackathon</h3>
                             <h3>XYZ</h3>
-
                         </div>
                     </div>
+            </div>
+            <div class="sidebar-right">
+                <div class="profile-card">
+                <div class="right_profile_image">
+                    <h1>About me!</h1>
+                    <img id="profile_photo" src="../images/default_profile_picture.jpg" class="profile_photo">
+                    <input type="file" id="photo_upload" accept="image/*"style="display: none;">
+                    <img src="../images/edit_photo.avif" class="camera_icon" onclick="document.getElementById('photo_upload').click()">
 
-
-
+                </div>
+                <div class="right_profile_info">
+                    <h3>Chandan</h3>
+                    <p>CSBS Department</p>
+                    <p>CGPA: 8.9</p>
+                    <p>Resume:Uploaded</p>
+                </div>
+                <button class="edit_profile_button">Edit Profile</button>
+                </div>
             </div>
         </div>
+        <script>
+            function openSkillsModal(){
+                const modal=document.getElementById("skillsModal");
+                const skillsList=document.querySelectorAll("#skills_list li");
+
+                let skillsText=" ";
+                skillsList.forEach(items => skillsText+=items.textContent+"\n");
+                document.getElementById("skills_input").value=skillsText;
+                modal.style.display="flex";
+            }
+            function closeSkillsModal(){
+                document.getElementById("skillsModal").style.display="none";
+
+            }
+
+            function saveSkills(){
+                const skillsText=document.getElementById("skills_input").value;
+                const skillsArray=skillsText.split("\n").filter(s=>s.trim() !=="");
+                
+                const skillsList=document.getElementById("skills_list");
+                skillsList.innerHTML="";
+
+                skillsArray.forEach(skill=>{
+                    const li=document.createElement("li");
+                    li.textContent=skill;
+                    skillsList.appendChild(li);
+                })
+                closeSkillsModal();
+            }
+        </script>
     </body>
 </html>
