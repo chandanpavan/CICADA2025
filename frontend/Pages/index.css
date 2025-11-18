@@ -12,7 +12,7 @@
 }
 @font-face {
     font-family: Roboto;
-    src: url(../Roboto/Roboto-VariableFont_wdth\,wght.ttf);
+    src: url(../Roboto/static/Roboto-Light.ttf);
 }
 .login{
 font-family: MomoSignature;
@@ -61,7 +61,7 @@ height:100vh;
     background-blend-mode: overlay;
 }
 
-.btn button{
+.btn {
     border:1px;
     width:auto;  
     background-color:#eed7c1;
@@ -184,7 +184,7 @@ height:100vh;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition:0.3s ease;
     color: #764d24;
-    font-family: MomoSignature;
+    font-family:MomoSignature;
     font-size: large;
     text-decoration: none;
     border-bottom: none;
@@ -296,7 +296,8 @@ height:100vh;
     flex-direction: column;
     background-color: #d8d3ba;
     color:#764d24;
-    font-family: MomoSignature;
+    font-family: Roboto;
+    font-weight: 600;
     font-size: large;
     border-radius: 12px;
     transition: position 0.3s ease;
@@ -573,6 +574,7 @@ height:100vh;
     transition:0.3s ease;
     width:45%;
     font-family:Roboto;
+    font-weight: normal;
   }
 
 .profile_items:hover{
