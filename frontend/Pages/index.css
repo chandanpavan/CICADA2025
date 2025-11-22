@@ -22,35 +22,50 @@ justify-content: center;
 align-items:center;
 margin-bottom: 50px;
 font-size:x-large;
-
-
 }
+
+.role-tab{
+    display:flex;
+    justify-content: center;
+}
+
+.login h5{
+    font-family: MomoSignature;
+    margin:20px 15px;
+}
+
 body{
     background-color: #E2E2E2;
+}
 
+.role-tab h5:hover{
+    border-bottom: 2px solid black;
+}
+
+.role-tab .active{
+    border-bottom: 2px solid black;
 }
 
 input{
-font-family: MomoSignature;
-border-radius: 10px;
-border-color: black;
-border-style: solid;
-border:1px solid black;
-padding: 5px;
-width: 70%;
-height: 25px;
-margin-top: 30px;
-color:black;
-
+    font-family: MomoSignature;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+    border:1px solid black;
+    padding: 5px;
+    width: 70%;
+    height: 25px;
+    margin-top: 30px;
+    color:black;
 }
 
 .body-wrapper{
-margin:0;
-padding:0;
-display:flex;
-justify-content: space-between;
-align-items: center;
-height:100vh;
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:100vh;
 }
 
 .login_image{

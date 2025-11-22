@@ -2,7 +2,7 @@
      <head>
         <title>My Profile</title>
     </head>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../../Pages/index.css">
     <body>
         <div class="container">
             <div class="sidebar-left">
@@ -23,7 +23,7 @@
                 <h2>My Profile</h2>
                     <div class="profile_container">
                         <div class="profile_items">
-                            <img id="profile_photo" src="../images/default_profile_picture.jpg" class="profile_photo">
+                            <img id="profile_photo" src="../../images/default_profile_picture.jpg" class="profile_photo">
                             <h3> USN:1BI18CS002</h3>
                             <h3> Branch:CSBS</h3>
                             <h3> Semester:3</h3>
@@ -104,6 +104,7 @@
                             <h2>Resume</h2>
                             <a href="#">Download Resume</a>
                             <a href="#">View Resume</a>
+                            <a href="#">Upload Resume</a>
                         </div>
 
                         <div class="profile_items">
@@ -129,9 +130,9 @@
                 <div class="profile-card">
                 <div class="right_profile_image">
                     <h1>About me!</h1>
-                    <img id="profile_photo" src="../images/default_profile_picture.jpg" class="profile_photo">
+                    <img id="profile_photo" src="../../images/default_profile_picture.jpg" class="profile_photo">
                     <input type="file" id="photo_upload" accept="image/*"style="display: none;">
-                    <img src="../images/edit_photo.avif" class="camera_icon" onclick="document.getElementById('photo_upload').click()">
+                    <img src="../../images/edit_photo.avif" class="camera_icon" onclick="document.getElementById('photo_upload').click()">
 
                 </div>
                 <div class="right_profile_info">
@@ -166,7 +167,7 @@
                 const skillsList=document.getElementById("skills_list");
                 skillsList.innerHTML="";
 
-                skillsArray.forEach(skill=>{
+                skillsArray.forEach(skill=>{ 
                     const li=document.createElement("li");
                     li.textContent=skill;
                     skillsList.appendChild(li);
