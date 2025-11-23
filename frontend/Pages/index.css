@@ -131,7 +131,9 @@ input{
 }
 
 .sidebar-left h2{
-    margin-bottom:40px
+    margin-bottom:20px;
+    margin-top:45px;
+    
 
 }
 .main-content{
@@ -148,7 +150,7 @@ input{
 .sidebar-left ul{
     list-style: none;
     padding:0;
-    margin-bottom: 170px;
+    margin-bottom: 140px;
 }
 
 .sidebar-left ul li:hover{
@@ -167,7 +169,7 @@ input{
 }
 
 .greeting{
-    margin:30px 0;
+    margin:30px 20px;
     font-family: MomoSignature;
     font-size: 24px;
     color: #764d24;
@@ -182,7 +184,6 @@ input{
     color:#333;
     text-decoration: none;
     border-bottom: none;
-
 }
 
 .card{
@@ -640,4 +641,21 @@ input{
 .change_pass,.change_email,.change_phonenum, input{
     margin-top:5px;
     margin-bottom: 10px;
+}
+
+.po-table{
+    border-collapse:collapse;
+    width:76%;
+    margin-top: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 5px rgb(101, 97, 97);
+    margin-left: 50px   ;
+}
+.po-table th, .po-table td{
+    padding:10px;
+    text-align: left;
+    border:1px solid #ddd;
+}
+.po-table th{
+    background-color: #d8d3ba;
 }

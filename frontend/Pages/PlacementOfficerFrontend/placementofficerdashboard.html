@@ -2,7 +2,127 @@
     <head>
         <title>Dashboard</title>
     </head>
+    <link rel="stylesheet" href="../../Pages/index.css">
     <body>
-        
+        <div class="container">
+             <div class="sidebar-left">
+                <h2 >Placement Portal</h2>
+                <div>
+                <ul>
+                    <li><a href="placementofficerdashboard.html">Dashboard</li></a>
+                    <li><a href="podrives.html">Placement Drives </li></a>
+                    <li><a href="pocompanies.html">Companies</li></a>
+                    <li><a href="porecruiets.html">Recruitment Rounds</li></a>
+                    <li><a href="poofferletters.html">Offer Letters</li></a>
+                    <li><a href="poemails.html">Email Notification</li></a>
+                    <li><a href="postudents.html">Students</li></a>
+                    <li><a href="../StudentFrontend/loginpage.html">Logout</li></a>
+                </ul>
+                </div>
+             </div>
+
+                <div class="main-content">
+                    <h1 style="border: 5px;border-bottom:3px;border-color: black; margin:30px 25px; ">Dashboard</h1>
+                    <div class="greeting">
+                        <h2 id="greetingText" ></h2>
+                    </div>
+                    <div class="card_container">
+                        <div class="card">
+                            <h3>Total upcoming drives</h3>
+                            <p  style="margin-bottom: 30px;">31</p>
+                        </div>
+                        <div class="card">
+                            <h3>Active Companies</h3>
+                            <p>44</p>
+                        </div>
+                        <div class="card">
+                            <h3>Students eligible</h3>
+                            <p>81</p>
+                        </div>
+                        <div class="card">
+                            <h3>Offer letters issued</h3>
+                            <p>24</p>
+                        </div>
+                    </div>
+
+                    <h2 style="margin-left:20px"> # Upcoming Drives</h2>
+                    <div class="po-table">
+                        <table>
+                            <tr>
+                                <th>Company Name</th>
+                                <th>Location</th>
+                                <th>Role</th>
+                                <th>Drive Date</th>
+                                <th style>View</th>
+                            </tr>
+                            <tr>
+                                <td>Tata Motors</td>
+                                <td>Hybrid(Bangalore)</td>
+                                <td>Manager</td>
+                                <td>19th May</td>
+                                <td><button>View</button></td>
+                            </tr>
+                            <tr>
+                                <td>Tesla</td>
+                                <td>Mars</td>
+                                <td>CEO</td>
+                                <td>1002 B.C</td>
+                                <td ><button>View</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="sidebar-right">
+                      <div class="profile-card">
+                <div class="right_profile_image">
+                    <h1>About me!</h1>
+                    <img id="profile_photo" src="../../images/default_profile_picture.jpg" class="profile_photo">
+                    <input type="file" id="photo_upload" accept="image/*"style="display: none;">
+                    <img src="../../images/edit_photo.avif" class="camera_icon" onclick="document.getElementById('photo_upload').click()">
+
+                </div>
+                <div class="right_profile_info">
+                    <h3>Chandan</h3>
+                    <p>CSBS Department</p>
+                    <p>CGPA: 8.9</p>
+                    <p>Resume:Uploaded</p>
+                </div>
+                <button class="edit_profile_button">Edit Profile</button>
+                </div>
+            </div>
+                </div>
+
+        </div>
+
+        <script>
+            const greetingText=document.getElementById("greetingText");
+            const hour=new Date().getHours();
+
+            let message="";
+
+            if(hour < 12 && hour>=5){
+                message="Good Morning";
+            }
+            else if(hour < 17 && hour>=12){
+                message="Good Afternoon";
+            }
+            else{
+                message="Good Evening";
+            }
+            greetingText.textContent=`${message}, Chandan!`;
+
+            const photo_upload= document.getElementById("photo_upload");
+            const profile_photo=document.getElementById("profile_photo");
+
+            photo_upload.addEventListener("change",function(){
+                const file=this.files[0];
+                if(file){
+                    profile_photo.src=URL.createObjectURL(file);
+                }
+            })
+
+        </script>
     </body>
+
 </html>
