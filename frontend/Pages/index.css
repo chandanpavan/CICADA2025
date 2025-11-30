@@ -204,6 +204,7 @@ input{
     font-size: large;
     text-decoration: none;
     border-bottom: none;
+    text-align: center;
 }
 
 .card_container{
@@ -222,7 +223,7 @@ input{
 .card h3{
     font-size:20px;
     margin-top:12px;
-    margin-left:-50px;
+    margin-left:0;
 }
 
 .card p{
@@ -658,4 +659,22 @@ input{
 }
 .po-table th{
     background-color: #d8d3ba;
+}
+.poqa-btn{
+    background-color:#d8d3ba;
+    color:#764d24;
+    padding:5px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+    border:1px solid #9d6d3d;
+    box-shadow: 0px 2px 5px rgb(101, 97, 97);
+    transition:0.3s ease;
+    display:flex;
+    flex-direction:column;
+    margin:10px 0;
+}
+
+.poqa-btn:hover{
+    transform:scale(1.05) translateY(-3px);
 }
